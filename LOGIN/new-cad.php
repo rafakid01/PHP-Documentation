@@ -1,6 +1,9 @@
 <?php
 
 include_once("header.php");
+include_once("connection/new.php");
+
+print_r($validacoes);
 
 ?>
 

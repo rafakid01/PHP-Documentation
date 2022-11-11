@@ -1,5 +1,6 @@
 <?php
 include_once("header.php");
+session_start();
 if ((!isset($_SESSION['user'])) and (!isset($_SESSION['password']))) {
     header('location:index.php');
 }

@@ -1,16 +1,4 @@
-<?php
-include_once("connection/new.php");
 
-$msg = "";
-
-if (isset($_SESSION["msg"])) {
-    $msg = $_SESSION["msg"];
-    $status = $_SESSION["status"];
-
-    $_SESSION["msg"] = "";
-    $_SESSION["status"] = "";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,12 +15,4 @@ if (isset($_SESSION["msg"])) {
 </head>
 
 <body>
-    <?php if ($msg != "") : ?>
-        <div class="container-sm alert alert-<?php echo $status ?>">
-            <div class="row">
-                <div class="col-ms-4">
-                    <p><?php echo $msg ?></p>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
+    
