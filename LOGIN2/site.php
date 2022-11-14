@@ -11,7 +11,9 @@ echo "Olá " . $actualUser;
 
 ?>
 
-
+<?php if($_SESSION['user'] == "Admin" && $_SESSION['password'] == "senhaadm") : ?>
+<button class="btn"><a href="dashboard.php">DashBoard</a></button>
+<?php endif ?>
 
 </body>
 

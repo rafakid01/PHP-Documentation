@@ -12,9 +12,13 @@ if ($_SESSION["user"] != "Admin" && $_SESSION["password"] != "senhaadm") {
 <div id="main-container">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-12 text-center">
+            <div class="col-md-1 text-center  mb-5">
+                <button class="btn"><a href="site.php">Back</a></button>
+            </div>
+            <div class="col-md-11 text-center  mb-5">
                 <h2>Gerenciar usuários</h2>
             </div>
+
             <div class="col-md-12 table-container">
                 <table class="table">
                     <thead>
@@ -33,7 +37,7 @@ if ($_SESSION["user"] != "Admin" && $_SESSION["password"] != "senhaadm") {
                                 <td><?php echo $user["password"] ?></td>
                                 <td class="d-flex">
                                     <form action="" method="POST">
-                                        <input type="hidden" name="type" value="delete">
+                                        <input type="hidden" name="type" value="edit">
                                         <input type="hidden" name="id" value="<?php echo $user["id"] ?>">
                                         <button class="btn" type="submit">
                                             <i class="bi bi-pencil-square"></i>

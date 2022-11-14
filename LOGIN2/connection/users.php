@@ -25,3 +25,7 @@ foreach($cad as $cadUni) {
 
     array_push($listUsers, $user);
 }
+
+$method = $_SERVER["REQUEST_METHOD"];
+
+if ($method === "POST") {}
