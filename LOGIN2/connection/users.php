@@ -28,4 +28,11 @@ foreach($cad as $cadUni) {
 
 $method = $_SERVER["REQUEST_METHOD"];
 
-if ($method === "POST") {}
+if ($method === "POST") {
+    $type = $_POST["type"];
+
+    // DELETANDO USUÁRIO
+    if($type == "delete") {
+        $userId = $_POST["id"];
+    }
+}

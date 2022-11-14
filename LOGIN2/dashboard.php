@@ -36,14 +36,14 @@ if ($_SESSION["user"] != "Admin" && $_SESSION["password"] != "senhaadm") {
                                 <td><?php echo $user["name"] ?></td>
                                 <td><?php echo $user["password"] ?></td>
                                 <td class="d-flex">
-                                    <form action="" method="POST">
+                                    <form action="connection/users.php" method="POST">
                                         <input type="hidden" name="type" value="edit">
                                         <input type="hidden" name="id" value="<?php echo $user["id"] ?>">
                                         <button class="btn" type="submit">
                                             <i class="bi bi-pencil-square"></i>
                                         </button>
                                     </form>
-                                    <form action="" method="POST">
+                                    <form action="connection/users.php" method="POST">
                                         <input type="hidden" name="type" value="delete">
                                         <input type="hidden" name="id" value="<?php echo $user["id"] ?>">
                                         <button class="btn" type="submit">
