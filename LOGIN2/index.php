@@ -20,7 +20,7 @@ include_once("connection/msg-status.php");
                             <label class="form-label mt-4">SENHA :</label>
                             <div class="row">
                                 <div class="col-11">
-                                    <input class="form-control" type="password" name="senha" id="senha" />
+                                    <input class="form-control" type="text" name="senha" id="senha" />
                                 </div>
                                 <div class="col-1 d-flex p-0">
                                     <i class="bi bi-eye d-flex align-items-center"></i>

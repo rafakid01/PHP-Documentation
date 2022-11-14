@@ -7,4 +7,12 @@ if (!isset($_SESSION['user']) && !isset($_SESSION['password'])) {
 
 $actualUser = $_SESSION['user'];
 
-echo "Bem vindo $actualUser";
+echo "Olá " . $actualUser;
+
+?>
+
+
+
+</body>
+
+</html>

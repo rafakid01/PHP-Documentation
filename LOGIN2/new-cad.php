@@ -22,7 +22,7 @@ include_once("connection/msg-status.php");
                             <div class="row">
 
                                 <div class="col-11">
-                                    <input class="form-control" type="password" name="newPass" id="newPass" />
+                                    <input class="form-control" type="text" name="newPass" id="newPass" />
                                 </div>
                                 <div class="col-1 d-flex p-0">
                                     <i class="bi bi-eye d-flex align-items-center"></i>
@@ -41,3 +41,7 @@ include_once("connection/msg-status.php");
         </div>
     </div>
 </div>
+
+</body>
+
+</html>
