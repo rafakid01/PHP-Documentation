@@ -7,7 +7,7 @@ $cad = $cadQuery->fetchAll();
 
 $listUsers = [];
 
-foreach($cad as $cadUni) {
+foreach ($cad as $cadUni) {
     $user = [];
 
     $user["id"] = $cadUni["id_user"];
@@ -32,7 +32,18 @@ if ($method === "POST") {
     $type = $_POST["type"];
 
     // DELETANDO USUÁRIO
-    if($type == "delete") {
+    if ($type == "delete") {
         $userId = $_POST["id"];
+
+        $deleteQuery = $conn->prepare("DELETE FROM users WHERE id_user = :id_user");
+
+        $deleteQuery->bindParam(":id_user", $userId, PDO::PARAM_INT);
+
+        $deleteQuery->execute();
+
+        $_SESSION["msg"] = "Usuário removido com successo";
+        $_SESSION["status"] = "success";
     }
+
+    header("Location: ../dashboard.php");
 }

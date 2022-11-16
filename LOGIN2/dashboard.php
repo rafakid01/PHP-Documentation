@@ -1,6 +1,7 @@
 <?php
 
 include_once("header.php");
+include_once("connection/msg-status.php");
 include_once("connection/users.php");
 
 if ($_SESSION["user"] != "Admin" && $_SESSION["password"] != "senhaadm") {
@@ -11,6 +12,13 @@ if ($_SESSION["user"] != "Admin" && $_SESSION["password"] != "senhaadm") {
 
 <div id="main-container">
     <div class="container">
+        <div class="row">
+            <div class="mt-3 alert alert-<?= $status ?>">
+                <p class="text-center">
+                    <?= $validation ?>
+                </p>
+            </div>
+        </div>
         <div class="row mt-5">
             <div class="col-md-1 text-center  mb-5">
                 <button class="btn"><a href="site.php">Back</a></button>
